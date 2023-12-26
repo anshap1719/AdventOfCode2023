@@ -2,18 +2,14 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include <sys/stat.h>
 
 int main() {
-    FILE *file_descriptor = fopen("/Users/anshulsanghi/Developer/aoc2023/1-1/input.txt", "r");
+    FILE *file_descriptor = fopen("./input.txt", "r");
     if (file_descriptor == NULL) {
         perror("fopen");
 
         return -1;
     }
-
-    struct stat file_stat;
-    stat("/Users/anshulsanghi/Developer/aoc2023/1-1/input.txt", &file_stat);
 
     char *contents = malloc(1024);
 
