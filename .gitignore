@@ -9,3 +9,5 @@
 .idea
 */.idea
 */cmake-build-debug
+main.dYSM/
+*/main.dSYM/
