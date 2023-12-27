@@ -39,7 +39,6 @@ struct Game {
     int id;
     struct Set sets[10];
     bool is_valid;
-    int minimum_power;
 };
 
 struct Draw create_draw_from_string(char* draw) {
