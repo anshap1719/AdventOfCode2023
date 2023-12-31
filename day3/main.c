@@ -5,22 +5,22 @@
 #include "contents.h"
 #include "types.h"
 
-void display_position(struct SymbolPosition* position) {
+void display_position(struct SymbolPosition *position) {
     printf("row: %zu, col: %zu\n", position->row, position->col);
 }
 
-void display_digit_position(struct DigitPosition* position) {
+void display_digit_position(struct DigitPosition *position) {
     printf("row: %zu, col: %zu, number: %ld\n", position->row, position->col, position->parsed_number);
 }
 
-bool are_positions_equal(struct SymbolPosition* left, struct SymbolPosition* right) {
+bool are_positions_equal(struct SymbolPosition *left, struct SymbolPosition *right) {
     return left->row == right->row && left->col == right->col;
 }
 
-struct SymbolPositionCollection compute_digit_positions(struct SymbolPosition* symbol_positions, size_t count) {
+struct SymbolPositionCollection compute_digit_positions(struct SymbolPosition *symbol_positions, size_t count) {
     size_t digit_positions_count = count * 8;
 
-    struct SymbolPosition* digit_positions = malloc(digit_positions_count * sizeof(struct SymbolPosition));
+    struct SymbolPosition *digit_positions = malloc(digit_positions_count * sizeof(struct SymbolPosition));
 
     for (size_t i = 0; i < digit_positions_count; i += 8) {
         struct SymbolPosition position = symbol_positions[i / 8];
@@ -66,7 +66,7 @@ struct SymbolPositionCollection compute_digit_positions(struct SymbolPosition* s
     return result;
 }
 
-void display_positions(struct SymbolPositionCollection* positions) {
+void display_positions(struct SymbolPositionCollection *positions) {
     for (long i = 0; i < positions->count; i++) {
         printf("row: %zu, col: %zu\n", positions->positions[i].row, positions->positions[i].col);
     }
@@ -131,12 +131,11 @@ int main() {
 
     size_t number_position_index = 0;
 
-    for(size_t i=0; i<row; i++)
-    {
-        for(size_t j=0; j<col; j++)
-        {
+    for (size_t i = 0; i < row; i++) {
+        for (size_t j = 0; j < col; j++) {
             printf("%c", *contents[i][j]);
         }
+
         printf("\n");
     }
 
