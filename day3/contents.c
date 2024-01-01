@@ -27,6 +27,7 @@ void read_contents_grid(FILE* file_descriptor, int positions_count, struct Symbo
                 } else {
                     positions[index].row = row;
                     positions[index].col = col;
+                    positions[index].is_gear = character == '*';
                     index++;
                     col++;
                     continue;

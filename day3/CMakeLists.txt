@@ -7,4 +7,10 @@ add_executable(day3
         main.c
         contents.c
         contents.h
-        types.h)
+        types.h
+        engine_part.c
+        position.c
+        position.h
+        engine_part.h
+        gear_ratio.c
+        gear_ratio.h)

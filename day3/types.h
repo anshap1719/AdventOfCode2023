@@ -5,9 +5,12 @@
 #ifndef DAY3_TYPES_H
 #define DAY3_TYPES_H
 
+#include <stdbool.h>
+
 struct SymbolPosition {
     int row;
     int col;
+    bool is_gear;
 };
 
 struct SymbolPositionCollection {
