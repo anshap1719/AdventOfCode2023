@@ -6,25 +6,25 @@
 #define DAY3_TYPES_H
 
 struct SymbolPosition {
-    size_t row;
-    size_t col;
+    int row;
+    int col;
 };
 
 struct SymbolPositionCollection {
     struct SymbolPosition* positions;
-    size_t count;
+    int count;
 };
 
 struct DigitPosition {
-    size_t row;
-    size_t col;
-    size_t digits_count;
-    size_t parsed_number;
+    int row;
+    int col;
+    int digits_count;
+    int parsed_number;
 };
 
 struct DigitPositionCollection {
     struct DigitPosition* positions;
-    size_t count;
+    int count;
 };
 
 #endif //DAY3_TYPES_H
