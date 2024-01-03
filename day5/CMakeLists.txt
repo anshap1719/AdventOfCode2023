@@ -7,4 +7,6 @@ add_executable(day5 main.c
         types.h
         parse.c
         parse.h
-        types.c)
+        types.c
+        almanac.c
+        almanac.h)

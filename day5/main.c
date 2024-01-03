@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "parse.h"
+#include "almanac.h"
 
 int main() {
     FILE *file_descriptor = fopen("./input.txt", "r");
@@ -12,6 +13,10 @@ int main() {
 
     struct Almanac almanac = parse_input(file_descriptor);
     display_almanac(&almanac);
+
+    int64_t lowest_location = find_lowest_location_for_almanac(&almanac);
+
+    printf("Lowest Location: %lld\n", lowest_location);
 
     free(almanac.seeds);
     free(almanac.seed_to_soil_map.ranges);
